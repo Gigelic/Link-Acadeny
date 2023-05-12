@@ -1,0 +1,93 @@
+body {background-color: #050210;}
+.sphere { width: 500px;
+          height: 500px;
+          border-radius: 50%;
+          margin-left: auto;
+          margin-right: auto;
+          margin-top: auto;
+          margin-bottom: auto;
+          position: center;
+          display: circle;
+          box-shadow: 100px, 100px, 100px ,auto;
+          background: conic-gradient(#fb5dad 3%, #55fb9f 25%, #b97aff 47%,#b97aff 53%,  #55fb9f 75%,#fb5dad 97%); 
+          animation-name: rotate;
+          animation-duration: 1.1s;
+          animation-iteration-count: infinite;
+          animation-timing-function: cubic-bezier(0.75, 0.75, 0.75, 0.75);
+          box-shadow: 0px 0px 600px currentColor; }
+.sphere2 {  width: 550px;
+            height: 550px;
+            border-radius: 50%;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: auto;
+            margin-bottom: auto;
+            position: center;
+            display: circle;
+            box-shadow: 100px, 100px, 100px ,auto;
+            background: conic-gradient(#fb5dad 3%, #55fb9f 25%, #b97aff 47%,#b97aff 53%,  #55fb9f 75%,#fb5dad 97%); 
+            animation-name: rotate2;
+            animation-duration: 1.1s;
+            animation-iteration-count: infinite;
+            animation-timing-function: cubic-bezier(0.75, 0.75, 0.75, 0.75);
+            box-shadow: 0px 0px 600px currentColor;
+            filter:blur(100px); }
+.in { width: 425px;
+      height: 425px;
+      border-radius: 50%;
+      margin-left: auto;
+      margin-right: auto;
+      margin-top: 50%;
+      top: 50%;
+      left: 50%;
+      transform: translateY(8.84%);
+      display: circle;
+      background: conic-gradient(#050210 50%, #050210 100%); 
+      filter: opacity(1); }
+.in2 {  width: 425px;
+        height: 425px;
+        border-radius: 50%;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 50%;
+        top: 50%;
+        left: 50%;
+        display: circle;
+        background: conic-gradient(#050210 50%, #050210 100%); 
+        animation-name: zoom;
+        filter: brightness(3);
+        animation-duration: 0.95s;
+        animation-iteration-count: infinite;
+        animation-timing-function: cubic-bezier(0.75, 0.75, 0.75, 0.75); }
+@keyframes rotate {
+  0% {  transform: translateX(0px) translateY(-550px) rotate(0deg);
+        width: 500px;
+        height: 500px;}
+  100% {  transform: translateX(0px) translateY(-550px) rotate(360deg);
+          width: 500px;
+          height: 500px; } }
+  @keyframes rotate2 {
+    0% { transform: translateX(0px) translateY(200px) rotate(0deg);
+      width: 510px;
+      height: 510px;
+  }
+    100% { transform: translateX(0px) translateY(200px) rotate(360deg);
+      width: 510px;
+      height: 510px;
+    }
+}
+@keyframes zoom {
+    0% {
+        transform-origin: 50% 50% 0;
+        transform: scale(0.047, 0.047);
+        width: 425px;
+        height: 425px;
+    }
+    100% {
+        transform-origin: 50% 50% 0;
+        transform: scale( 1, 1);
+        filter: brightness(3);
+        width: 425px;
+        height: 425px;
+    }
+}
